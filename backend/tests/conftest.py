@@ -1,0 +1,9 @@
+import sys
+from pathlib import Path
+
+# Add backend directory to sys.path
+backend_dir = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(backend_dir))
+
+from app.database import init_db
+init_db()
